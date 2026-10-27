@@ -11,12 +11,14 @@ remember one password, your **master password**. You don't need your phone.
 ## What you need
 
 1. A VPS running Linux (Ubuntu or Debian is easiest) with ports 80 and 443 open.
-2. A domain or subdomain pointing at the VPS's IP address, for example
-   `vault.yourname.com`. Add an **A record** at your domain provider.
-   If you don't have a domain, [DuckDNS](https://www.duckdns.org) gives you a
-   free one such as `myvault.duckdns.org`.
-   You need HTTPS, and HTTPS needs a domain. The Bitwarden apps won't
-   connect without it.
+2. A hostname that points at the VPS. You need HTTPS, HTTPS needs a
+   hostname, and the Bitwarden apps won't connect without HTTPS.
+   **You don't have to buy a domain.** Any of these works:
+   - **Hostinger's built-in hostname** (easiest): in hPanel → VPS →
+     Overview, look for a hostname like `srv123456.hstgr.cloud`.
+   - **sslip.io** (no sign-up): use your IP with dashes instead of dots,
+     e.g. IP `203.0.113.7` → `203-0-113-7.sslip.io`.
+   - **Your own domain**: add an **A record** for e.g. `vault.yourname.com`.
 
 ## Install (about 10 minutes)
 
